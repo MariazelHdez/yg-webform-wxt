@@ -1,0 +1,13 @@
+diff --git a/core/lib/Drupal/Core/StringTranslation/TranslatableMarkup.php b/core/lib/Drupal/Core/StringTranslation/TranslatableMarkup.php
+index dcff3fc3b2..9974454cef 100644
+--- a/core/lib/Drupal/Core/StringTranslation/TranslatableMarkup.php
++++ b/core/lib/Drupal/Core/StringTranslation/TranslatableMarkup.php
+@@ -127,7 +127,7 @@ class TranslatableMarkup extends FormattableMarkup {
+    * @ingroup sanitization
+    */
+   public function __construct($string, array $arguments = [], array $options = [], TranslationInterface $string_translation = NULL) {
+-    if (!is_string($string)) {
++    if (!is_string($string) && is_scalar($string)) {
+       $message = $string instanceof TranslatableMarkup ? '$string ("' . $string->getUntranslatedString() . '") must be a string.' : '$string ("' . (string) $string . '") must be a string.';
+       throw new \InvalidArgumentException($message);
+     }

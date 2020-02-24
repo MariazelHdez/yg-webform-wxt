@@ -1,0 +1,26 @@
+.webform-submission-form .webform-actions #edit-actions-wizard-next{
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+  color: #fff;
+  background-color: #2572b4;
+  border-color: #143c5f;
+/*   margin-bottom: 30px; */
+}
+
+.webform-submission-form .webform-actions  #edit-actions-wizard-prev{
+  border: none;
+  background: transparent;
+  display: block;
+/*
+  bottom: -15px;
+  position: absolute; 
+*/
+}
+
+.webform-progress__status{
+  text-align: left;
+  font-size: 18px;
+  font-weight: normal;
+}
