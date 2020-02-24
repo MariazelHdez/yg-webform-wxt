@@ -1,0 +1,15 @@
+name: 'Webform Yukon'
+description: 'Webform Yukon'
+type: module
+# core: 8.x
+package: Yukon
+
+
+# Required modules
+dependencies:
+  - drupal:webform
+
+version: '8.x-1.0'
+core: '8.x'
+project: 'webform_yukon'
+
