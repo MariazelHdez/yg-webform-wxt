@@ -12,39 +12,14 @@
       <div class="container">
         <div class="row">
           <div class="site-main-logo col-xs-6">
-            {{ drupal_entity('block', 'wxt_bootstrap_yukon_sitebranding') }}
+            {{page.branding}}
           </div>
           <div class="site-nav-toggle col-xs-6">
             <div class="row">
               <div class="pull-right">
-                <section id="wb-lng" class="header-lang-toggle">
-                  {{ drupal_entity('block', 'languageswitcher')}}
-                </section>
-                <button href="javascript:void(0)" class="" aria-controls="global-nav" aria-haspopup="true"  id="menu-button" title="{{ 'Search and menus'|t }}">
-                  <span class="menu-icon" aria-hidden="true">
-                    <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><g fill="#323232" fill-rule="evenodd" ><rect width="30" height="6" rx="2"/><rect y="12" width="30" height="6" rx="2"/><rect y="24" width="30" height="6" rx="2"/></g></svg>
-                  </span>
-                  <p class="gov-serv">Menu</p>
-                </button>
-              </div>
+                {{page.navigation}}
             </div>
           </div>
-
-          <nav id="global-nav" aria-label="Main navigation" role="navigation">
-            <header>
-              <button href="javascript:void(0)" class="closebtn">{{ 'Close'|t }}
-                <svg viewBox="0 0 40 40">
-                  <path class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30"></path>
-                </svg>
-              </button>
-              <h3 class="gov-serv-h3">{{ 'Government services <br />and information'|t }}</h3>
-            </header>
-            <h2 class="visuallyhidden">{{ 'Topics menu'|t }}</h2>
-            {{ drupal_entity('block', 'navigation') }}
-          </nav>
-          <span class="global-nav_overlay" role="button" tabindex="0" id="a11y-toggle-2">
-            <span class="visually-hidden">{{ 'Government services <br />and information'|t }}</span>
-          </span>
         </div>
       </div>
     </div>
@@ -52,10 +27,6 @@
 
   {% endblock %}
 {% endif %}
-
-  <div class="aurora-town">
-    <span class="aurora--main"></span>
-  </div>
 
 {# Main #}
 {% block main %}
@@ -112,7 +83,6 @@
           <a id="main-content"></a>
           {{ page.content_header }}
           {{ page.content }}
-          <!--span class="aurora--mini"></span-->
           {{ page.content_footer }}
         {% endblock %}
       </div>
